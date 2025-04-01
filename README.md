@@ -60,5 +60,9 @@ Este endpoint devuelve el precio aplicable de un producto en una fecha determina
 
 `mvn clean test
 `
+## Repository
+
+### `https://github.com/fonsorover/pruebaInditex.git`
+
 
 #### created by Alfonso Rodriguez Verdera
