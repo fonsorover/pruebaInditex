@@ -6,12 +6,14 @@ import com.inditex.price_service.domain.model.Price;
 import com.inditex.price_service.infrastructure.exception.InvalidDateFormatException;
 import com.inditex.price_service.infrastructure.exception.PriceNotFoundException;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDateTime;
 
 @RestController
+@RequestMapping("/api/prices")
 public class PriceController {
 
     private final PriceService priceService;
@@ -20,7 +22,7 @@ public class PriceController {
         this.priceService = priceService;
     }
 
-    @GetMapping("/prices")
+    @GetMapping
     public Price getPrice(
             @RequestParam int brandId,
             @RequestParam int productId,
