@@ -83,7 +83,36 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<!-- JaCoCo Plugin -->
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.9</version>
+				<executions>
+					<!-- Prepara el agente JaCoCo durante las pruebas -->
+					<execution>
+						<id>prepare-agent</id> <!-- Unique ID -->
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
 
+					<!-- Genera el reporte después de las pruebas -->
+					<execution>
+						<id>report</id> <!-- Unique ID -->
+						<goals>
+							<goal>report</goal>
+						</goals>
+						<phase>post-integration-test</phase> <!-- Esta fase asegura que se ejecute después de las pruebas -->
+					</execution>
+				</executions>
+			</plugin>
+			<!-- Plugin de SonarQube -->
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.9.1.2184</version>
+			</plugin>
 		</plugins>
 	</build>
 
