@@ -44,7 +44,7 @@ Este endpoint devuelve el precio aplicable de un producto en una fecha determina
 
 #### Ejemplo de solicitud
 
-- `GET http://localhost:8080/prices?brandId=1&productId=35455&applicationDate=2020-06-14T10:00:00`
+- `GET http://localhost:8080/api/prices?brandId=1&productId=35455&applicationDate=2020-06-14T10:00:00`
 #### Ejemplo de respuesta
 {
 "productId": 35455,
@@ -64,5 +64,8 @@ Este endpoint devuelve el precio aplicable de un producto en una fecha determina
 
 ### `https://github.com/fonsorover/pruebaInditex.git`
 
+## API doc
+
+### `http://localhost:8080/swagger-ui/index.html`
 
 #### created by Alfonso Rodriguez Verdera
